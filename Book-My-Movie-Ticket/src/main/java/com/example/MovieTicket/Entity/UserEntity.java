@@ -35,8 +35,8 @@ public class UserEntity {
 	
 	
 	
-//	@ManyToMany(cascade = CascadeType.ALL)
-//	private List<MovieEntity> movie;
+	@ManyToMany(cascade = CascadeType.ALL)
+	private List<MovieEntity> movie;
 
 	public UserEntity() {
 		super();
@@ -51,7 +51,7 @@ public class UserEntity {
 		this.useremailid = useremailid;
 		this.age = age;
 		this.confirmationnumber = confirmationnumber;
-		//this.movie = movie;
+		this.movie = movie;
 	}
 
 	public int getUserid() {
@@ -102,13 +102,13 @@ public class UserEntity {
 		this.confirmationnumber = confirmationnumber;
 	}
 
-//	public List<MovieEntity> getMovie() {
-//		return movie;
-//	}
-//
-//	public void setMovie(List<MovieEntity> movie) {
-//		this.movie = movie;
-//	}
+	public List<MovieEntity> getMovie() {
+		return movie;
+	}
+
+	public void setMovie(List<MovieEntity> movie) {
+		this.movie = movie;
+	}
 
 	@Override
 	public String toString() {
